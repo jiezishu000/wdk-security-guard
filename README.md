@@ -12,7 +12,9 @@ Scans transactions for common security risks **before** signing:
 ## Installation
 
 ```bash
-npm install @jiezishu000/wdk-security-guard
+npm install github:jiezishu000/wdk-security-guard
+
+# (once published to npm: `npm install @jiezishu000/wdk-security-guard`)
 ```
 
 ## Quick Start

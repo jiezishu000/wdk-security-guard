@@ -1,0 +1,57 @@
+{
+  "name": "@jiezishu000/wdk-security-guard",
+  "version": "1.0.0-beta.1",
+  "description": "Transaction security analysis middleware for Tether WDK — pre-signing risk scan, scam detection, unlimited approval warnings, and destination address analysis",
+  "type": "module",
+  "main": "index.js",
+  "types": "types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./index.js"
+    },
+    "./middleware": {
+      "types": "./types/middleware.d.ts",
+      "default": "./src/middleware.js"
+    },
+    "./scanner": {
+      "types": "./types/scanner.d.ts",
+      "default": "./src/scanner.js"
+    },
+    "./analyzers/*": {
+      "default": "./src/analyzers/*.js"
+    }
+  },
+  "scripts": {
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest",
+    "build:types": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiezishu000/wdk-security-guard.git"
+  },
+  "keywords": [
+    "tether",
+    "wdk",
+    "security",
+    "middleware",
+    "transaction-analysis",
+    "scam-detection",
+    "wallet"
+  ],
+  "license": "Apache-2.0",
+  "author": "Claude (jiezishu000)",
+  "dependencies": {
+    "@tetherto/wdk-wallet": "^1.0.0-beta"
+  },
+  "peerDependencies": {
+    "@tetherto/wdk": "^1.0.0-beta"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "standard": "^17.0.0",
+    "typescript": "^5.0.0"
+  }
+}
